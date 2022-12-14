@@ -1,35 +1,39 @@
 #include "main.h"
 /**
- * times_table - Prints the 9 times table
+ *times_table - 9 times table
  *
- * Return: no return
+ *Return: no return value
+ *
  */
 void times_table(void)
 {
-	int a, b, op;
-
-	for (a = 0; a <= 9; a++)
-	{
-		_putchar(48);
-		for (b = 1; b <= 9; b++)
-		{
-
-			op = a * b;
-			_putchar(44);
-			_putchar(32);
-			if (op <= 9)
-			{
-				_putchar(32);
-				_putchar(op + 48);
-
-			}
-			else
-			{
-				_putchar((op / 10) + 48);
-				_putchar((op % 10) + 48);
-			}
-		}
-
-		_putchar('\n');
-	}
+int i, j, product;
+for (i = 0; i < 10; i++)
+{
+for (j = 0; j < 10; j++)
+{
+product = i * j;
+if (j == 0)
+{
+_putchar('0' + product);
+}
+else if (product >= 10)
+{
+_putchar(' ');
+_putchar('0' + (product / 10));
+_putchar('0' + (product % 10));
+}
+else
+{
+_putchar(' ');
+_putchar(' ');
+_putchar(product + '0');
+}
+if (j != 9)
+{
+_putchar(',');
+}
+}
+_putchar('\n');
+}
 }
