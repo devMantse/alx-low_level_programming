@@ -4,4 +4,4 @@
 
 2. Write a function that searches for an integer.
 
-3. Write a program that performs simple operations.
+3. Write a program that performs simple operations..
